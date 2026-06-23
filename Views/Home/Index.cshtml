@@ -1,0 +1,109 @@
+@{
+    ViewData["Title"] = "Fix My Issue";
+}
+
+<!-- Hero Section -->
+<div class="hero-wrapper">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start pe-lg-5">
+                <h1 class="hero-title">Report, Track, and Resolve <br class="d-none d-xl-block" />Your Complaints Easily</h1>
+                <p class="hero-subtitle">Efficiently manage complaints and find solutions<br class="d-none d-xl-block" /> with our comprehensive platform.</p>
+                
+                @if (User.Identity!.IsAuthenticated && User.IsInRole("Student"))
+                {
+                    <a class="btn btn-primary-custom shadow" asp-controller="Student" asp-action="Create">Submit Complaint</a>
+                }
+                else if (!User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-primary-custom shadow" asp-controller="Account" asp-action="Login">Submit Complaint</a>
+                }
+            </div>
+            <div class="col-lg-6 hero-image-container">
+                <!-- Abstract vector art resembling the illustration -->
+                <svg viewBox="0 0 500 400" width="100%" height="auto" class="hero-illustration">
+                    <!-- Background blobs -->
+                    <circle cx="250" cy="200" r="180" fill="#e0f2fe" opacity="0.5" />
+                    <!-- Laptop -->
+                    <rect x="120" y="240" width="220" height="130" rx="8" fill="#1e3a8a" />
+                    <rect x="130" y="250" width="200" height="110" rx="4" fill="#3b82f6" />
+                    <path d="M90 370 L370 370 L390 390 L70 390 Z" fill="#60a5fa" />
+                    <circle cx="230" cy="305" r="12" fill="#1e3a8a" opacity="0.6" />
+                    
+                    <!-- Floating UI screens -->
+                    <rect x="230" y="40" width="220" height="140" rx="12" fill="white" stroke="#bed7ed" stroke-width="2" />
+                    <rect x="245" y="55" width="190" height="20" rx="4" fill="#f1f5f9" />
+                    <rect x="245" y="85" width="50" height="50" rx="4" fill="#60a5fa" opacity="0.2" />
+                    <circle cx="270" cy="110" r="15" fill="#3b82f6" fill-opacity="0.8" />
+                    <!-- Magnifying glass inside circle -->
+                    <path d="M265 105 L275 115 M272 102 A 6 6 0 1 1 262 112" stroke="white" stroke-width="3" fill="none" />
+                    
+                    <rect x="305" y="85" width="130" height="8" rx="4" fill="#e2e8f0" />
+                    <rect x="305" y="105" width="100" height="8" rx="4" fill="#e2e8f0" />
+                    <rect x="305" y="125" width="80" height="8" rx="4" fill="#e2e8f0" />
+
+                    <!-- Success Tag -->
+                    <rect x="200" y="190" width="280" height="40" rx="6" fill="#10b981" opacity="0.9" />
+                    <circle cx="230" cy="210" r="10" fill="white" />
+                    <path d="M226 210 L229 213 L234 207" stroke="#10b981" stroke-width="2" fill="none" />
+                    <text x="250" y="215" fill="white" font-family="Arial" font-size="12" font-weight="bold">Resolved</text>
+
+                    <!-- Alert Bubble -->
+                    <circle cx="90" cy="120" r="40" fill="#ef4444" />
+                    <rect x="85" y="95" width="10" height="30" rx="4" fill="white" />
+                    <circle cx="90" cy="140" r="6" fill="white" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Steps Section -->
+<div class="steps-section">
+    <div class="container">
+        <h2>How It Works</h2>
+        <p class="text-muted">Simple Steps to Resolve Your Issues</p>
+        
+        <div class="row position-relative mt-5">
+            <!-- Arrow 1 -->
+            <svg class="step-arrow d-none d-lg-block" style="left: 25%;" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,10 L90,10 M85,5 L95,10 L85,15" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <!-- Arrow 2 -->
+            <svg class="step-arrow d-none d-lg-block" style="left: 58%;" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,10 L90,10 M85,5 L95,10 L85,15" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <div class="col-md-4 mb-5 mb-md-0">
+                <div class="step-item">
+                    <div class="step-icon-wrapper">
+                        <i class="fa-solid fa-file-invoice text-info"></i>
+                        <div class="check-badge">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+                    <div class="step-title">Submit Complaint</div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5 mb-md-0">
+                <div class="step-item">
+                    <div class="step-icon-wrapper" style="background-color: #e0e7ff;">
+                        <i class="fa-solid fa-magnifying-glass text-primary" style="font-size: 2.8rem;"></i>
+                    </div>
+                    <div class="step-title">Track Status</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="step-item">
+                    <div class="step-icon-wrapper" style="background-color: #d1fae5;">
+                        <i class="fa-solid fa-file-contract text-success"></i>
+                        <div class="check-badge" style="background-color: #10b981; border-color: #d1fae5;">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+                    <div class="step-title">Get Resolution</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

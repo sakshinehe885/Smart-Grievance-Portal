@@ -1,0 +1,78 @@
+@{
+    ViewData["Title"] = "Customer Support";
+}
+
+<div class="container-fluid py-4">
+    <div class="row align-items-center bg-white rounded-4 shadow-sm p-5 mb-4 border-top border-4 border-primary">
+        <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+            <h1 class="display-5 fw-bold text-primary mb-3" style="letter-spacing: -1px;">Customer Support</h1>
+            <p class="lead text-muted mb-5" style="font-size: 1.1rem; line-height: 1.7;">
+                Experiencing issues with the portal? Our dedicated support team is here to help you resolve any technical problems, account queries, or general questions you might have.
+            </p>
+            
+            <div class="d-flex flex-column gap-4">
+                <div class="d-flex align-items-center p-4 rounded-4 shadow-sm transition-all hover-lift" style="background-color: #f8fafc; border-left: 6px solid #3b82f6;">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-4 shadow" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1 fw-bold text-uppercase text-muted" style="font-size: 0.85rem; letter-spacing: 1px;">Email Us</h6>
+                        <a href="mailto:complaint.support@gmail.com" class="text-dark text-decoration-none fs-4 fw-bold">complaint.support@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center p-4 rounded-4 shadow-sm transition-all hover-lift" style="background-color: #f8fafc; border-left: 6px solid #10b981;">
+                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-4 shadow" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1 fw-bold text-uppercase text-muted" style="font-size: 0.85rem; letter-spacing: 1px;">Call Us</h6>
+                        <a href="tel:8149175748" class="text-dark text-decoration-none fs-4 fw-bold">8149175748</a>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        
+        <div class="col-lg-6 text-center">
+            <!-- Modern Illustration replacing using FontAwesome composition -->
+            <div class="position-relative mx-auto my-5" style="max-width: 450px;">
+                <!-- Decorative background blobs -->
+                <div class="bg-primary rounded-circle position-absolute top-50 start-50 translate-middle" style="width: 380px; height: 380px; opacity: 0.08; filter: blur(20px);"></div>
+                <div class="bg-info rounded-circle position-absolute top-0 start-0" style="width: 150px; height: 150px; opacity: 0.1; filter: blur(15px); transform: translate(-30%, -30%);"></div>
+                
+                <div class="position-relative z-1 py-4">
+                    <i class="fa-solid fa-headset text-primary" style="font-size: 14rem; filter: drop-shadow(0 15px 25px rgba(37,99,235,0.25));"></i>
+                    
+                    <!-- Floating chat bubbles matching the inspiration image -->
+                    <div class="position-absolute bg-white rounded-4 shadow border p-3 d-flex align-items-center text-primary" style="top: -10px; right: 20px; transform: rotate(8deg); animation: float 6s ease-in-out infinite;">
+                        <i class="fa-solid fa-comment-dots fa-2x"></i>
+                    </div>
+                    <div class="position-absolute bg-white rounded-4 shadow border p-3 d-flex align-items-center text-success" style="bottom: 40px; left: 0px; transform: rotate(-12deg); animation: float 5s ease-in-out infinite alternate;">
+                        <i class="fa-solid fa-face-smile-wink fa-2x"></i>
+                    </div>
+                    <div class="position-absolute bg-white rounded-circle shadow border p-3 d-flex align-items-center text-warning" style="bottom: 150px; right: -20px; animation: float 7s ease-in-out infinite;">
+                        <i class="fa-solid fa-gear fa-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hover-lift {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05) !important;
+    }
+    
+    @@keyframes float {
+        0% { transform: translateY(0px) rotate(auto); }
+        50% { transform: translateY(-15px) rotate(auto); }
+        100% { transform: translateY(0px) rotate(auto); }
+    }
+</style>

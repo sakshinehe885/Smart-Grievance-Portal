@@ -1,0 +1,320 @@
+@model SmartGrievancePortal.Models.Complaint
+
+@{
+    ViewData["Title"] = "Track Complaint";
+
+    // Determine progress steps
+    int progressPercentage = 0;
+    string statusColor = "text-primary";
+    
+    if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Pending)
+    {
+        progressPercentage = 0;
+        statusColor = "text-warning";
+    }
+    else if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.InProgress)
+    {
+        progressPercentage = 50;
+        statusColor = "text-info";
+    }
+    else if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Resolved)
+    {
+        progressPercentage = 100;
+        statusColor = "text-success";
+    }
+    else if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Rejected)
+    {
+        progressPercentage = 100; // Complete but rejected
+        statusColor = "text-danger";
+    }
+}
+
+<style>
+    .tracking-wrapper {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+        padding: 40px;
+        margin-bottom: 30px;
+    }
+    .tracking-header-label {
+        color: #888;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    .tracking-id {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #222;
+        margin-bottom: 30px;
+    }
+    .tracking-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 10px;
+    }
+    .tracking-status-text {
+        font-weight: 700;
+    }
+    .tracking-desc {
+        color: #666;
+        margin-bottom: 40px;
+    }
+    /* Horizontal Progress Bar */
+    .progress-track {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0 60px 0;
+    }
+    .progress-track::before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: #e5e5e5;
+        z-index: 1;
+    }
+    .progress-bar-fill {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        height: 3px;
+        background-color: #4ade80; /* green */
+        z-index: 2;
+        transition: width 0.5s ease;
+    }
+    .step {
+        text-align: center;
+        position: relative;
+        z-index: 3;
+        width: 100px;
+    }
+    .step-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #e5e5e5;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 10px auto;
+        font-size: 1.2rem;
+        transition: all 0.3s;
+    }
+    .step.completed .step-icon {
+        background-color: #4ade80;
+    }
+    .step.rejected .step-icon {
+        background-color: #ef4444;
+    }
+    .step-label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #555;
+    }
+    /* Vertical Timeline */
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 40px;
+    }
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 8px;
+        bottom: 0;
+        width: 2px;
+        background-color: #e5e5e5;
+    }
+    .timeline-item {
+        position: relative;
+        margin-bottom: 25px;
+    }
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 6px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid #ccc;
+    }
+    .timeline-item.active::before {
+        border-color: #4ade80;
+        background-color: #4ade80;
+    }
+    .timeline-item.rejected::before {
+        border-color: #ef4444;
+        background-color: #ef4444;
+    }
+    .timeline-title {
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 4px;
+        font-size: 1.05rem;
+    }
+    .timeline-date {
+        font-size: 0.8rem;
+        color: #888;
+        display: block;
+    }
+</style>
+
+<div class="container-fluid py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="tracking-wrapper">
+                <div class="tracking-header-label">complaint tracking details</div>
+                <div class="tracking-id">Ticket ID: @Model.Id</div>
+
+                <div class="tracking-title">
+                    @Model.Title <span class="@statusColor tracking-status-text">Status: @Model.Status</span>
+                </div>
+                <div class="tracking-desc">
+                    The complaint has been recorded under the category of <strong>@(Model.Category?.Name ?? "General")</strong>.
+                </div>
+
+                <!-- Horizontal Tracker -->
+                <div class="progress-track" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                    @{
+                        var fillWidth = "0%";
+                        if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.InProgress) fillWidth = "50%";
+                        if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Resolved || Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Rejected) fillWidth = "100%";
+                    }
+                    <div class="progress-bar-fill" style="width: @fillWidth; @(Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Rejected ? "background-color: #ef4444;" : "")"></div>
+                    
+                    <div class="step completed">
+                        <div class="step-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="step-label">Submitted</div>
+                    </div>
+                    
+                    <div class="step @(Model.Status != SmartGrievancePortal.Models.ComplaintStatus.Pending ? "completed" : "")">
+                        <div class="step-icon">
+                            <i class="fa-solid @(Model.Status != SmartGrievancePortal.Models.ComplaintStatus.Pending ? "fa-check" : "fa-spinner")"></i>
+                        </div>
+                        <div class="step-label">In Progress</div>
+                    </div>
+                    
+                    <div class="step @(progressPercentage == 100 ? (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Resolved ? "completed" : "rejected") : "")">
+                        <div class="step-icon">
+                            @if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Rejected)
+                            {
+                                <i class="fa-solid fa-xmark"></i>
+                            }
+                            else if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Resolved)
+                            {
+                                <i class="fa-solid fa-check"></i>
+                            }
+                            else
+                            {
+                                <i class="fa-solid fa-flag-checkered"></i>
+                            }
+                        </div>
+                        <div class="step-label">@(Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Rejected ? "Rejected" : "Resolved")</div>
+                    </div>
+                </div>
+
+                <!-- Vertical Timeline -->
+                <div class="timeline mt-5">
+                    @if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Resolved || Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Rejected)
+                    {
+                        <div class="timeline-item @(Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Rejected ? "rejected" : "active")">
+                            <div class="timeline-title">
+                                @Model.Status -> @(Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Resolved ? "Complaint Resolved Successfully" : "Complaint Rejected")
+                            </div>
+                            <span class="timeline-date">@(Model.DateResolved?.ToString("yyyy-MM-dd HH:mm UTC") ?? "N/A")</span>
+                            @if (!string.IsNullOrEmpty(Model.StaffRemarks))
+                            {
+                                <p class="text-muted mt-2 mb-0" style="font-size: 0.9rem;"><strong>Remarks:</strong> @Model.StaffRemarks</p>
+                            }
+                        </div>
+                    }
+
+                    @if (Model.Status != SmartGrievancePortal.Models.ComplaintStatus.Pending)
+                    {
+                        <div class="timeline-item @(Model.Status == SmartGrievancePortal.Models.ComplaintStatus.InProgress ? "active" : "")">
+                            <div class="timeline-title">
+                                In Progress -> Assigned to Staff
+                            </div>
+                            <span class="timeline-date">Updated Recently</span>
+                            <p class="text-muted mt-2 mb-0" style="font-size: 0.9rem;">
+                                Expected to be handled by: <strong>@(Model.AssignedStaff?.FullName ?? "Staff Member")</strong>
+                            </p>
+                        </div>
+                    }
+
+                    <div class="timeline-item @(Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Pending ? "active" : "")">
+                        <div class="timeline-title">
+                            Submitted -> Complaint Logged in System
+                        </div>
+                        <span class="timeline-date">@Model.DateCreated.ToString("yyyy-MM-dd HH:mm UTC")</span>
+                        <p class="text-muted mt-2 mb-0" style="font-size: 0.9rem;">
+                            @Model.Description
+                        </p>
+                    </div>
+                </div>
+
+                @if (!string.IsNullOrEmpty(Model.PhotoPath))
+                {
+                    <div class="mt-4 pt-3 border-top">
+                        <h6 class="text-uppercase fw-bold text-muted mb-3" style="font-size: 0.85rem;">Attached Evidence</h6>
+                        <img src="@Model.PhotoPath" alt="Evidence" class="img-thumbnail rounded" style="max-height: 200px;" />
+                    </div>
+                }
+
+                @if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Resolved)
+                {
+                    <div class="mt-5 pt-4 border-top">
+                        <h5 class="fw-bold mb-3">Feedback</h5>
+                        @if (string.IsNullOrEmpty(Model.StudentFeedback))
+                        {
+                            <form asp-action="SubmitFeedback" method="post" class="bg-light p-4 rounded mt-3">
+                                <input type="hidden" name="id" value="@Model.Id" />
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Rate Your Resolution Experience</label>
+                                    <select name="rating" class="form-select" required style="max-width: 200px;">
+                                        <option value="">Select a rating</option>
+                                        <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                                        <option value="4">⭐⭐⭐⭐ - Good</option>
+                                        <option value="3">⭐⭐⭐ - Average</option>
+                                        <option value="2">⭐⭐ - Poor</option>
+                                        <option value="1">⭐ - Terrible</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Comments (Optional)</label>
+                                    <textarea name="studentFeedback" rows="3" class="form-control" placeholder="Share your experience..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success px-4 py-2 fw-bold">Submit Feedback</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <div class="bg-light p-3 rounded">
+                                <div class="mb-1"><strong>Your Rating:</strong> @Model.Rating/5 ⭐</div>
+                                <p class="mb-0 text-muted">"@Model.StudentFeedback"</p>
+                            </div>
+                        }
+                    </div>
+                }
+                
+                <div class="mt-5 text-center">
+                    <a asp-action="Dashboard" class="btn btn-outline-secondary px-5 py-2 fw-bold" style="border-radius: 30px;">Back to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

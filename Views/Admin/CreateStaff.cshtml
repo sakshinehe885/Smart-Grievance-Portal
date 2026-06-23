@@ -1,0 +1,83 @@
+@model SmartGrievancePortal.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Create Staff";
+}
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white py-3">
+                <h5 class="mb-0 fw-bold text-slate-700"><i class="fa-solid fa-user-plus me-2 text-primary"></i>Register New Staff</h5>
+            </div>
+            <div class="card-body p-4">
+                <form asp-action="CreateStaff" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                    
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label asp-for="PassportPhoto" class="form-label fw-semibold small text-uppercase text-muted"></label>
+                            <input asp-for="PassportPhoto" type="file" class="form-control bg-light border-0 shadow-sm" accept="image/*" />
+                            <span asp-validation-for="PassportPhoto" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="FullName" class="form-label fw-semibold small text-uppercase text-muted"></label>
+                            <input asp-for="FullName" class="form-control bg-light border-0 shadow-sm" placeholder="Enter full name" />
+                            <span asp-validation-for="FullName" class="text-danger small"></span>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Gender" class="form-label fw-semibold small text-uppercase text-muted"></label>
+                            <select asp-for="Gender" class="form-select bg-light border-0 shadow-sm">
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="Gender" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <label asp-for="Email" class="form-label fw-semibold small text-uppercase text-muted"></label>
+                            <input asp-for="Email" class="form-control bg-light border-0 shadow-sm" placeholder="email@college.com" />
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <label asp-for="Department" class="form-label fw-semibold small text-uppercase text-muted">Department / Role</label>
+                            <input asp-for="Department" class="form-control bg-light border-0 shadow-sm" placeholder="e.g. Maintenance, IT, Hostel" />
+                            <span asp-validation-for="Department" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Password" class="form-label fw-semibold small text-uppercase text-muted"></label>
+                            <input asp-for="Password" type="password" class="form-control bg-light border-0 shadow-sm" />
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label asp-for="ConfirmPassword" class="form-label fw-semibold small text-uppercase text-muted"></label>
+                            <input asp-for="ConfirmPassword" type="password" class="form-control bg-light border-0 shadow-sm" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary shadow-sm py-2 fw-bold">
+                            Create Staff Account
+                        </button>
+                        <a asp-action="Dashboard" class="btn btn-link text-muted text-decoration-none small text-center mt-2">
+                            <i class="fa-solid fa-arrow-left me-1"></i> Back to Dashboard
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

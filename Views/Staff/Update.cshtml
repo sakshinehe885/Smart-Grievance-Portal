@@ -1,0 +1,122 @@
+@model SmartGrievancePortal.Models.Complaint
+
+@{
+    ViewData["Title"] = "Update Complaint";
+}
+
+<div class="row align-items-start h-100">
+    <!-- Complaint Details Column -->
+    <div class="col-lg-7">
+        <div class="card shadow-sm border-0 mb-4 h-100">
+            <div class="card-header bg-white border-bottom-0 pt-4 px-4">
+                <div class="d-flex align-items-center">
+                    <div class="rounded-circle bg-primary bg-opacity-10 p-2 me-3 text-primary d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+                        <i class="fa-solid fa-file-invoice fs-5"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-0 fw-bold text-slate-800">Complaint Details</h5>
+                        <p class="text-muted smallest mb-0 text-uppercase tracking-wider">Reference ID: #@Model.Id</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body px-4 pb-4">
+                <div class="mb-4">
+                    <label class="text-muted smallest text-uppercase fw-bold ls-1 mb-1">Subject</label>
+                    <h5 class="fw-bold text-slate-900">@Model.Title</h5>
+                </div>
+
+                <div class="mb-4">
+                    <label class="text-muted smallest text-uppercase fw-bold ls-1 mb-1">Description</label>
+                    <div class="bg-light p-3 rounded text-slate-700" style="font-size: 0.95rem; line-height: 1.6;">
+                        @Model.Description
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-sm-6">
+                        <label class="text-muted smallest text-uppercase fw-bold ls-1 mb-1">Student Name</label>
+                        <div class="fw-bold text-slate-800">@(Model.StudentName ?? Model.Student?.FullName ?? "N/A")</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="text-muted smallest text-uppercase fw-bold ls-1 mb-1">Course & Year</label>
+                        <div class="text-slate-700">@(Model.StudentCourse ?? "N/A") - @(Model.StudentYear ?? "N/A") Year</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="text-muted smallest text-uppercase fw-bold ls-1 mb-1">Roll Number</label>
+                        <div class="text-slate-700">@(Model.StudentRollNumber ?? "N/A")</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="text-muted smallest text-uppercase fw-bold ls-1 mb-1">Division</label>
+                        <div class="text-slate-700">@(Model.StudentDivision ?? "N/A")</div>
+                    </div>
+                </div>
+
+                @if (!string.IsNullOrEmpty(Model.PhotoPath))
+                {
+                    <div>
+                        <label class="text-muted smallest text-uppercase fw-bold ls-1 mb-2 d-block">Evidence Attached</label>
+                        <div class="evidence-container bg-light rounded p-2 text-center" style="border: 1px dashed #cbd5e1;">
+                            <img src="@Model.PhotoPath" alt="Evidence" class="img-fluid rounded shadow-sm" style="max-height: 350px;" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Update Form Column -->
+    <div class="col-lg-5">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-header bg-white border-bottom-0 pt-4 px-4 text-center">
+                <h5 class="mb-0 fw-bold text-slate-800">Action Center</h5>
+                <p class="text-muted small">Select the appropriate status and add remarks.</p>
+            </div>
+            <div class="card-body px-4 pb-4">
+                <form asp-action="Update">
+                    <input type="hidden" asp-for="Id" />
+                    
+                    <div class="mb-4">
+                        <label asp-for="Status" class="form-label fw-bold text-slate-700">Update Status</label>
+                        <select asp-for="Status" class="form-select form-select-lg shadow-none border-2" 
+                                asp-items="Html.GetEnumSelectList<SmartGrievancePortal.Models.ComplaintStatus>()"
+                                style="font-size: 0.95rem; border-radius: 12px; border-color: #e2e8f0;"></select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="StaffRemarks" class="form-label fw-bold text-slate-700">Resolution Remarks</label>
+                        <textarea asp-for="StaffRemarks" class="form-control shadow-none border-2" rows="6" 
+                                  placeholder="Describe the investigation or resolution steps..."
+                                  style="border-radius: 12px; border-color: #e2e8f0; font-size: 0.95rem;"></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg shadow-sm border-0 py-3 fw-bold" style="border-radius: 12px; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);">
+                            <i class="fa-solid fa-cloud-arrow-up me-2"></i> Update Record
+                        </button>
+                        <a asp-action="Dashboard" class="btn btn-light btn-lg border-0 py-2 text-muted fw-bold" style="border-radius: 12px; font-size: 0.9rem;">
+                            Discard & Return
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .text-slate-900 { color: #0f172a; }
+    .text-slate-800 { color: #1e293b; }
+    .text-slate-700 { color: #334155; }
+    .smallest { font-size: 0.7rem; }
+    .ls-1 { letter-spacing: 0.05em; }
+    
+    .form-select:focus, .form-control:focus {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+    }
+
+    .evidence-container:hover img {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+    }
+</style>

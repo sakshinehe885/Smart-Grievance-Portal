@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Nunito', 'Inter', sans-serif;
+    color: #4a5568;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header & Navbar */
+.navbar {
+    padding: 1rem 0;
+    background: transparent;
+}
+.nav-link {
+    color: #4a5568 !important;
+    font-weight: 600;
+    margin: 0 0.5rem;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+.nav-link:hover {
+    color: #2b73cd !important;
+}
+.btn-primary-custom {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: white !important;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+.btn-primary-custom:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.btn-transparent-box {
+    border: 1.5px solid #cbd5e1;
+    background-color: transparent;
+    color: #4a5568 !important;
+    border-radius: 8px;
+    padding: 0.4rem 1.2rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-transparent-box:hover {
+    border-color: #3b82f6;
+    color: #3b82f6 !important;
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+.hero-wrapper {
+    background: linear-gradient(180deg, #f3fafe 0%, #ffffff 100%);
+    padding: 5rem 0 2rem 0;
+    overflow: hidden;
+}
+.hero-title {
+    color: #1a365d;
+    font-weight: 800;
+    font-size: 3.25rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+.hero-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-illustration {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Steps Section */
+.steps-section {
+    padding: 1rem 0 5rem 0;
+    margin-top: -1rem;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    background: #ffffff;
+}
+.steps-section h2 {
+    color: #1e293b;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.steps-section p.text-muted {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    color: #94a3b8 !important;
+}
+.step-item {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.step-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    background: #f0f9ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.5), 0 10px 25px rgba(0,0,0,0.05);
+}
+.step-icon-wrapper i {
+    font-size: 2.5rem;
+    color: #0ea5e9;
+}
+.step-icon-wrapper .check-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: #10b981;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    font-size: 14px;
+}
+.step-title {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 1.25rem;
+}
+.step-arrow {
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    width: 100px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+@media (max-width: 991px) {
+    .step-arrow { display: none; }
+    .hero-title { font-size: 2.5rem; }
+    .hero-wrapper { padding: 3rem 0; }
+}
+
+/* Base Form/Card Styles for Other Pages */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+}
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Grouped Section UI Modernization */
+.light-blue-container {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.grouped-card {
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.03);
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    min-height: auto;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.grouped-panel-left {
+    background: linear-gradient(to bottom, #bae6fd, #7dd3fc);
+    color: #0369a1;
+    padding: 4rem 3rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-radius: 0 160px 160px 0;
+    z-index: 2;
+}
+
+.grouped-panel-right {
+    background-color: #ffffff;
+    padding: 4rem 3rem;
+    width: 70%;
+    z-index: 1;
+}
+
+.grouped-panel-left h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0c4a6e;
+}
+
+.grouped-panel-right h2 {
+    color: #0c4a6e;
+    font-weight: 800;
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.details-group-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.details-group-box h5 {
+    color: #0369a1;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #bae6fd;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.light-box-input {
+    background-color: #ffffff !important;
+    border: 1.5px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    padding: 0.85rem 1.25rem !important;
+    font-size: 1rem !important;
+    color: #1e293b !important;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.light-box-input:focus {
+    border-color: #0369a1 !important;
+    box-shadow: 0 0 0 4px rgba(3, 105, 161, 0.1) !important;
+    background-color: #ffffff !important;
+}
+
+.btn-grouped-primary {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+    padding: 1.15rem 4rem; /* Slightly larger padding for premium feel */
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(3, 105, 161, 0.15);
+}
+
+.btn-grouped-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(3, 105, 161, 0.2);
+}
+
+.btn-grouped-outline {
+    background: #ffffff;
+    color: #0369a1;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    padding: 0.85rem 3rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-grouped-outline:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transform: scale(1.05);
+}
+
+@media (max-width: 991px) {
+    .grouped-card {
+        flex-direction: column;
+    }
+    .grouped-panel-left {
+        width: 100%;
+        border-radius: 0 0 60px 60px;
+        padding: 3rem;
+    }
+    .grouped-panel-right {
+        width: 100%;
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* Login Page Modernization: Centered Card & Animations */
+.centered-login-card {
+    background: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0 40px 100px rgba(12, 74, 110, 0.08);
+    width: 100%;
+    max-width: 480px;
+    padding: 3.5rem 2.5rem;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(186, 230, 253, 0.3);
+}
+
+.centered-register-card {
+    background: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0 40px 100px rgba(12, 74, 110, 0.08);
+    width: 100%;
+    max-width: 900px; /* Wider for registration fields */
+    padding: 3.5rem 2.5rem;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(186, 230, 253, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-header-icon {
+    width: 76px;
+    height: 76px;
+    background: #f0f9ff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #0369a1;
+    font-size: 1.85rem;
+    box-shadow: 0 12px 24px rgba(3, 105, 161, 0.08);
+}
+
+@media (max-width: 576px) {
+    .centered-login-card {
+        padding: 2.5rem 1.5rem;
+        border-radius: 24px;
+    }
+}

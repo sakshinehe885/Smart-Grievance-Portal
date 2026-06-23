@@ -1,0 +1,186 @@
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<style>
+    .about-section {
+        background-color: #fff;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+    
+    .about-bg-shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #bfdbfe; /* lighter blue theme */
+        border-top-left-radius: 40% 60%;
+        border-bottom-left-radius: 60% 40%;
+        z-index: 0;
+        opacity: 0.9;
+    }
+
+    .about-bg-shape-alt {
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 40%;
+        height: 40%;
+        background-color: rgba(191, 219, 254, 0.2);
+        border-radius: 50%;
+        z-index: 0;
+        filter: blur(40px);
+    }
+    
+    .about-content {
+        position: relative;
+        z-index: 1;
+        padding: 4rem 2rem;
+    }
+    
+    .about-title {
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: #1f2937;
+        letter-spacing: -2px;
+        margin-bottom: 1rem;
+    }
+    
+    .pill-btn {
+        background-color: #bfdbfe;
+        color: #fff;
+        font-weight: 700;
+        padding: 0.8rem 2.5rem;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 4px 10px rgba(191, 219, 254, 0.4);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .pill-btn:hover {
+        background-color: #93c5fd;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(191, 219, 254, 0.5);
+        color: #fff;
+    }
+
+    .feature-list {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+
+    .feature-list li {
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: flex-start;
+        font-size: 1.1rem;
+        color: #4b5563;
+    }
+
+    .feature-list li i {
+        color: #93c5fd;
+        margin-top: 5px;
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+
+    /* Abstract illustration styling */
+    .illustration-wrapper {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 400px;
+    }
+    
+    .line-art {
+        font-size: 18rem;
+        color: #1f2937;
+        filter: drop-shadow(5px 5px 0px rgba(255, 255, 255, 0.8));
+    }
+    
+    .pagination-dots {
+        display: flex;
+        gap: 8px;
+        margin-top: 2rem;
+    }
+    
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #e5e7eb;
+    }
+    .dot.active {
+        background-color: #6b7280;
+    }
+</style>
+
+<div class="container-fluid py-4">
+    <div class="about-section">
+        <!-- Abstract Shapes -->
+        <div class="about-bg-shape d-none d-lg-block"></div>
+        <div class="about-bg-shape-alt"></div>
+        
+        <div class="row align-items-center h-100 m-0">
+            <!-- Left Content Area -->
+            <div class="col-lg-6 about-content ps-lg-5">
+                <h1 class="about-title">ABOUT US</h1>
+                <p class="lead text-muted mb-4 pe-lg-5" style="font-size: 1.2rem; line-height: 1.6;">
+                    The Smart Grievance Portal is a centralized platform designed to bridge the gap between students and the administration. 
+                    Our goal is to ensure that every student's voice is heard and every issue is resolved transparently and efficiently.
+                </p>
+                
+                <h5 class="fw-bold mt-4 mb-3" style="color: #374151;">What you can do here:</h5>
+                <ul class="feature-list">
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>Submit Complaints:</strong> Easily log academic, hostel, or operational grievances from your dashboard.</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                        <span><strong>Track Progress:</strong> Monitor real-time status updates from Submission to Resolution.</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-comments"></i>
+                        <span><strong>Direct Feedback:</strong> Rate your resolution experience and communicate with staff.</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-print"></i>
+                        <span><strong>Maintain Records:</strong> Download and print official copies of your logged tickets anytime.</span>
+                    </li>
+                </ul>
+
+                <div class="mt-5">
+                    <a href="#" class="btn pill-btn">Learn more</a>
+                    
+                    <div class="pagination-dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Illustration Area -->
+            <div class="col-lg-6 illustration-wrapper d-none d-lg-flex">
+                <!-- Using FontAwesome composition to mimic the line-art professionals -->
+                <div class="position-relative d-flex justify-content-center align-items-center w-100">
+                    <div class="d-flex position-relative me-4" style="z-index: 2;">
+                        <i class="fa-solid fa-user-tie line-art" style="font-size: 22rem;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

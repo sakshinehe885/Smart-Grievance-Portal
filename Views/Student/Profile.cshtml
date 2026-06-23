@@ -1,0 +1,100 @@
+@model SmartGrievancePortal.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<div class="container-fluid py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+                <!-- Header / Banner -->
+                <div class="bg-primary pt-4 pb-4 px-4 position-relative" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
+                    <div class="d-flex align-items-center flex-wrap">
+                        <div class="bg-white p-1 rounded-circle shadow-sm" style="z-index: 2;">
+                            <img src="@(string.IsNullOrEmpty(Model.PassportPhotoPath) ? "/img/default-avatar.png" : Model.PassportPhotoPath)" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid white;" alt="Profile Photo" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent('@Model.FullName') + '&background=random&color=fff';">
+                        </div>
+                        <div class="ms-sm-4 mt-4 mt-sm-0 text-white">
+                            <h2 class="fw-bold mb-1">@Model.FullName</h2>
+                            <p class="mb-0 opacity-75 fs-5">@Model.Course - @Model.Year</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body pt-4 px-4 pb-4 bg-light">
+
+                    <div class="row">
+                        <!-- Left Column: Personal Info -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm rounded-3">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bold text-primary border-bottom pb-2 mb-4">
+                                        <i class="fa-solid fa-address-card me-2"></i>Personal Details
+                                    </h5>
+                                    
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Email Address</small>
+                                        <span class="fs-6 text-dark fw-medium">@Model.Email</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Gender</small>
+                                        <span class="fs-6 text-dark fw-medium">@Model.Gender</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Contact Number</small>
+                                        <span class="fs-6 text-dark fw-medium">@Model.PhoneNumber</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Alternate Contact</small>
+                                        <span class="fs-6 text-dark fw-medium">@(string.IsNullOrEmpty(Model.AlternateContactNumber) ? "N/A" : Model.AlternateContactNumber)</span>
+                                    </div>
+                                    <div class="mb-0">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Permanent Address</small>
+                                        <span class="fs-6 text-dark fw-medium">@Model.Address</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Academic Info -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm rounded-3">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bold text-primary border-bottom pb-2 mb-4">
+                                        <i class="fa-solid fa-graduation-cap me-2"></i>Academic Details
+                                    </h5>
+                                    
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Course</small>
+                                        <span class="fs-6 text-dark fw-medium">@Model.Course</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Year</small>
+                                        <span class="fs-6 text-dark fw-medium">@Model.Year</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Division</small>
+                                        <span class="fs-6 text-dark fw-medium">@Model.Division</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Roll Number</small>
+                                        <span class="fs-6 text-dark fw-medium">@Model.RollNumber</span>
+                                    </div>
+                                    <div class="mb-0">
+                                        <small class="text-muted d-block fw-bold text-uppercase" style="font-size: 0.75rem;">Residential Status</small>
+                                        <div class="mt-1">
+                                            <span class="badge @(Model.IsHosteller ? "bg-success" : "bg-secondary") rounded-pill px-3 py-2">
+                                                <i class="fa-solid @(Model.IsHosteller ? "fa-bed" : "fa-house") me-1"></i>
+                                                @(Model.IsHosteller ? "Hosteller" : "Day Scholar")
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

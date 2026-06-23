@@ -1,0 +1,598 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\migrations\\20260223160446_initialsqlserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:migrations\\20260223160446_initialsqlserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\student\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\student\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\student\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\student\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\student\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\student\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\student\\downloadcopy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\student\\downloadcopy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\home\\support.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\home\\support.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\migrations\\20260223170040_addfeedbackandremarks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:migrations\\20260223170040_addfeedbackandremarks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\student\\track.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\student\\track.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\admin\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\admin\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\models\\appmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:models\\appmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\viewmodels\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:viewmodels\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\migrations\\20260323180100_addstudentinfoandphototocomplaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:migrations\\20260323180100_addstudentinfoandphototocomplaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\views\\admin\\createstaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:views\\admin\\createstaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|c:\\users\\admin\\desktop\\smart-grievance_portal\\fixmyissue\\dotnet-tools.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B6DC0A0F-5FD0-8C5C-2539-D33CD310AA9E}|SmartGrievancePortal.csproj|solutionrelative:dotnet-tools.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T05:22:57.847Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\Create.cshtml",
+              "RelativeToolTip": "Views\\Student\\Create.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAowEUAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-27T19:19:15.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAUwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:13:02.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AboutUs.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\AboutUs.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\AboutUs.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\AboutUs.cshtml",
+              "RelativeToolTip": "Views\\Student\\AboutUs.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-24T18:34:15.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:19:39.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20260223160446_InitialSqlServer.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Migrations\\20260223160446_InitialSqlServer.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260223160446_InitialSqlServer.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Migrations\\20260223160446_InitialSqlServer.cs",
+              "RelativeToolTip": "Migrations\\20260223160446_InitialSqlServer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T18:38:28.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T06:53:50.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-28T04:26:46.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Support.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Home\\Support.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Support.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Home\\Support.cshtml",
+              "RelativeToolTip": "Views\\Home\\Support.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAACKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-24T17:20:15.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DownloadCopy.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\DownloadCopy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\DownloadCopy.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\DownloadCopy.cshtml",
+              "RelativeToolTip": "Views\\Student\\DownloadCopy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-24T18:34:09.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\Student\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:25:10.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AboutUs.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Home\\AboutUs.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\AboutUs.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Home\\AboutUs.cshtml",
+              "RelativeToolTip": "Views\\Home\\AboutUs.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:12:58.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20260223170040_AddFeedbackAndRemarks.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Migrations\\20260223170040_AddFeedbackAndRemarks.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260223170040_AddFeedbackAndRemarks.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Migrations\\20260223170040_AddFeedbackAndRemarks.cs",
+              "RelativeToolTip": "Migrations\\20260223170040_AddFeedbackAndRemarks.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T18:39:41.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Data\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "Data\\DbSeeder.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Data\\DbSeeder.cs",
+              "RelativeToolTip": "Data\\DbSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:13:07.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T06:27:40.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:12:31.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:12:53.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAkwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T17:13:43.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T06:48:32.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "StaffController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\StaffController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StaffController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Controllers\\StaffController.cs",
+              "RelativeToolTip": "Controllers\\StaffController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T17:43:05.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-29T04:10:42.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-29T04:09:49.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-29T04:09:26.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:28:24.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Track.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\Track.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\Track.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Student\\Track.cshtml",
+              "RelativeToolTip": "Views\\Student\\Track.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:28:22.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:16:16.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:09:46.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Admin\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Admin\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\Admin\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:02:31.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T19:01:42.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T18:44:40.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AppModels.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Models\\AppModels.cs",
+              "RelativeDocumentMoniker": "Models\\AppModels.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Models\\AppModels.cs",
+              "RelativeToolTip": "Models\\AppModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T18:41:16.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-28T06:50:07.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20260323180100_AddStudentInfoAndPhotoToComplaint.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Migrations\\20260323180100_AddStudentInfoAndPhotoToComplaint.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260323180100_AddStudentInfoAndPhotoToComplaint.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Migrations\\20260323180100_AddStudentInfoAndPhotoToComplaint.cs",
+              "RelativeToolTip": "Migrations\\20260323180100_AddStudentInfoAndPhotoToComplaint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T18:39:59.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\ViewModels\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\ViewModels\\AccountViewModels.cs",
+              "RelativeToolTip": "ViewModels\\AccountViewModels.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T06:49:55.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "dotnet-tools.json",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\dotnet-tools.json",
+              "RelativeDocumentMoniker": "dotnet-tools.json",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\dotnet-tools.json",
+              "RelativeToolTip": "dotnet-tools.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-28T04:27:03.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CreateStaff.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Admin\\CreateStaff.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\CreateStaff.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Smart-Grievance_Portal\\FixMyIssue\\Views\\Admin\\CreateStaff.cshtml",
+              "RelativeToolTip": "Views\\Admin\\CreateStaff.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-27T09:50:25.423Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

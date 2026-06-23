@@ -1,0 +1,179 @@
+@model SmartGrievancePortal.Models.Complaint
+
+@{
+    ViewData["Title"] = "Download Complaint Copy - FixMyIssue";
+}
+
+<style>
+    /* Styling for the printable document format */
+    .document-wrapper {
+        background-color: #fff;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+    }
+    .document-header {
+        border-bottom: 2px solid #3b82f6;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    .document-logo {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #3b82f6;
+    }
+    .document-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #495057;
+    }
+    .info-group {
+        margin-bottom: 20px;
+    }
+    .info-label {
+        font-weight: 600;
+        color: #6c757d;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+    .info-value {
+        font-size: 1.1rem;
+        color: #212529;
+        padding: 8px;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        border: 1px solid #e9ecef;
+    }
+    
+    /* Print specific styles to hide UI elements */
+    @@media print {
+        body {
+            background-color: white !important;
+        }
+        #sidebar, .top-navbar, .page-title-bar, footer, .print-hide, .btn {
+            display: none !important;
+        }
+        #content {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+        .document-wrapper {
+            box-shadow: none !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            max-width: 100% !important;
+        }
+    }
+</style>
+
+<div class="container-fluid py-4">
+    
+    <!-- Action Buttons -->
+    <div class="d-flex justify-content-center gap-3 mb-4 print-hide">
+        <button type="button" class="btn btn-outline-primary px-4 py-2" onclick="window.print()">
+            <i class="fa-solid fa-eye me-2"></i> Preview
+        </button>
+        <button type="button" class="btn btn-primary px-4 py-2 shadow-sm" onclick="window.print()">
+            <i class="fa-solid fa-print me-2"></i> Print / Download
+        </button>
+    </div>
+
+    <!-- Printable Document -->
+    <div class="document-wrapper">
+        <div class="document-header d-flex justify-content-between align-items-center">
+            <div class="document-logo">
+                <i class="fa-solid fa-building-columns me-2"></i> FIXMYISSUE
+            </div>
+            <div class="text-end">
+                <div class="document-title">Official Complaint Record</div>
+                <div class="text-muted mt-1">Ticket ID: @Model.Id</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 info-group">
+                <div class="info-label">Date Submitted</div>
+                <div class="info-value">@Model.DateCreated.ToString("MMMM dd, yyyy") at @Model.DateCreated.ToString("hh:mm tt")</div>
+            </div>
+            <div class="col-md-6 info-group">
+                <div class="info-label">Current Status</div>
+                <div class="info-value fw-bold text-uppercase 
+                    @(Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Pending ? "text-warning" : 
+                      Model.Status == SmartGrievancePortal.Models.ComplaintStatus.InProgress ? "text-info" : 
+                      Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Resolved ? "text-success" : "text-danger")">
+                    @Model.Status
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mt-4 mb-3 pb-2 border-bottom fw-bold">Student Details</h5>
+        <div class="row">
+            <div class="col-md-6 info-group">
+                <div class="info-label">Student Name</div>
+                <div class="info-value">@(Model.StudentName ?? "N/A")</div>
+            </div>
+            <div class="col-md-6 info-group">
+                <div class="info-label">Roll Number</div>
+                <div class="info-value">@(Model.StudentRollNumber ?? "N/A")</div>
+            </div>
+            <div class="col-md-6 info-group">
+                <div class="info-label">Course</div>
+                <div class="info-value">@(Model.StudentCourse ?? "N/A")</div>
+            </div>
+             <div class="col-md-6 info-group">
+                <div class="info-label">Year</div>
+                <div class="info-value">@(Model.StudentYear ?? "N/A")</div>
+            </div>
+        </div>
+
+        <h5 class="mt-4 mb-3 pb-2 border-bottom fw-bold">Complaint Information</h5>
+        <div class="row">
+            <div class="col-12 info-group">
+                <div class="info-label">Complaint Title</div>
+                <div class="info-value fw-bold">@Model.Title</div>
+            </div>
+            <div class="col-12 info-group">
+                <div class="info-label">Category</div>
+                <div class="info-value">@(Model.Category?.Name ?? "General")</div>
+            </div>
+            <div class="col-12 info-group">
+                <div class="info-label">Full Description</div>
+                <div class="info-value p-3" style="min-height: 120px; white-space: pre-wrap;">@Model.Description</div>
+            </div>
+        </div>
+
+        @if (Model.Status == SmartGrievancePortal.Models.ComplaintStatus.Resolved || !string.IsNullOrEmpty(Model.StaffRemarks))
+        {
+            <h5 class="mt-4 mb-3 pb-2 border-bottom fw-bold">Resolution Details</h5>
+            <div class="row">
+                <div class="col-12 info-group">
+                    <div class="info-label">Staff / Admin Remarks</div>
+                    <div class="info-value p-3" style="background-color: #f1f8ff; border-color: #c8e1ff; min-height: 80px;">
+                        @(string.IsNullOrEmpty(Model.StaffRemarks) ? "No remarks provided." : Model.StaffRemarks)
+                    </div>
+                </div>
+                @if (Model.DateResolved.HasValue)
+                {
+                    <div class="col-12 info-group mt-2">
+                        <div class="info-label">Resolved On</div>
+                        <div class="info-value">@Model.DateResolved.Value.ToString("MMMM dd, yyyy hh:mm tt")</div>
+                    </div>
+                }
+            </div>
+        }
+
+        <div class="mt-5 text-center text-muted" style="font-size: 0.8rem; border-top: 1px dashed #ccc; padding-top: 20px;">
+            <p class="mb-1">This is a system-generated document. It does not require a physical signature.</p>
+            <p>Generated on @DateTime.Now.ToString("dd MMMM yyyy HH:mm:ss") by FixMyIssue</p>
+        </div>
+
+    </div>
+</div>

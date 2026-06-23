@@ -1,0 +1,42 @@
+@model SmartGrievancePortal.Models.Complaint
+
+@{
+    ViewData["Title"] = "Assign Staff";
+}
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white py-3">
+                <h5 class="mb-0 fw-bold text-slate-700"><i class="fa-solid fa-user-tag me-2 text-info"></i>Assign Staff to Ticket</h5>
+            </div>
+            <div class="card-body p-4">
+                <div class="mb-4">
+                    <label class="form-label fw-semibold small text-uppercase text-muted">Complaint Title</label>
+                    <div class="p-3 bg-light rounded fw-medium text-dark border-start border-3 border-info">
+                        @Model.Title
+                    </div>
+                </div>
+
+                <form asp-action="AssignStaff">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold small text-uppercase text-muted">Select Staff Member</label>
+                        <select name="assignedStaffId" class="form-select bg-white shadow-sm border-0 py-2" asp-items="ViewBag.StaffList">
+                            <option value="">-- Choose from Available Staff --</option>
+                        </select>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary shadow-sm py-2 fw-bold">
+                            Complete Assignment
+                        </button>
+                        <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-link text-muted text-decoration-none small text-center mt-2">
+                            Cancel and Go Back
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

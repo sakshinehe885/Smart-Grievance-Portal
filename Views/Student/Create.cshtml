@@ -1,0 +1,82 @@
+@model SmartGrievancePortal.Models.Complaint
+
+@{
+    ViewData["Title"] = "Submit Complaint";
+}
+
+<div class="container-fluid py-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold text-dark">Submit a New Complaint</h2>
+                    <p class="text-muted">Please provide as much detail as possible to help us resolve your issue.</p>
+                </div>
+                
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+                    
+                    <h5 class="mb-3 text-primary border-bottom pb-2">Student Information <small class="text-muted fw-normal ms-2">(Autofilled from profile)</small></h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label asp-for="StudentName" class="form-label fw-semibold">Name</label>
+                            <input asp-for="StudentName" class="form-control bg-light" readonly />
+                            <span asp-validation-for="StudentName" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="StudentCourse" class="form-label fw-semibold">Course Name</label>
+                            <input asp-for="StudentCourse" class="form-control bg-light" readonly />
+                            <span asp-validation-for="StudentCourse" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label asp-for="StudentYear" class="form-label fw-semibold">Year</label>
+                            <input asp-for="StudentYear" class="form-control bg-light" readonly />
+                            <span asp-validation-for="StudentYear" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="StudentDivision" class="form-label fw-semibold">Division</label>
+                            <input asp-for="StudentDivision" class="form-control bg-light" readonly />
+                            <span asp-validation-for="StudentDivision" class="text-danger small"></span>
+                        </div>
+                        <div class="col-12 mt-3 mb-4">
+                            <label asp-for="StudentRollNumber" class="form-label fw-semibold">Roll Number</label>
+                            <input asp-for="StudentRollNumber" class="form-control bg-light" readonly />
+                            <span asp-validation-for="StudentRollNumber" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <h5 class="mb-3 text-primary border-bottom pb-2 mt-4">Complaint Details</h5>
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label fw-semibold"></label>
+                        <input asp-for="Title" class="form-control" placeholder="Brief subject/title of the issue" />
+                        <span asp-validation-for="Title" class="text-danger small"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="CategoryId" class="form-label fw-semibold">Category</label>
+                        <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.Categories"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Description" class="form-label fw-semibold"></label>
+                        <textarea asp-for="Description" class="form-control" rows="5" placeholder="Detailed description of your complaint..."></textarea>
+                        <span asp-validation-for="Description" class="text-danger small"></span>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Upload Photo (Optional)</label>
+                        <input type="file" name="photoFile" class="form-control" accept="image/*" />
+                        <div class="form-text text-muted">Upload an image as evidence (e.g., photo of a broken bench).</div>
+                    </div>
+
+                    <div class="d-flex gap-3 justify-content-end mt-4 pt-3 border-top">
+                        <a asp-action="Dashboard" class="btn btn-light px-4">Cancel</a>
+                        <button type="submit" class="btn btn-primary-custom px-4"><i class="fa-solid fa-paper-plane me-2"></i> Submit Complaint</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

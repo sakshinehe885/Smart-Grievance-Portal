@@ -1,0 +1,117 @@
+@model IEnumerable<SmartGrievancePortal.Models.ApplicationUser>
+@{
+    ViewData["Title"] = "Staff Directory";
+}
+
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4 mt-2">
+    <div>
+        <h1 class="h3 mb-0 text-slate-800 fw-bold">Staff Directory</h1>
+        <p class="text-muted small mb-0">View and find colleagues across various departments.</p>
+    </div>
+    <div class="filter-pills d-flex align-items-center bg-white p-1 rounded-pill shadow-sm border">
+        <a asp-action="StaffMembers" asp-route-department="" 
+           class="btn @(ViewBag.SelectedDepartment == "All" ? "btn-active shadow-sm" : "btn-inactive")">
+            All
+        </a>
+        <a asp-action="StaffMembers" asp-route-department="CS" 
+           class="btn @(ViewBag.SelectedDepartment == "CS" ? "btn-active shadow-sm" : "btn-inactive")">
+            CS
+        </a>
+        <a asp-action="StaffMembers" asp-route-department="Hostel" 
+           class="btn @(ViewBag.SelectedDepartment == "Hostel" ? "btn-active shadow-sm" : "btn-inactive")">
+            Hostel
+        </a>
+        <a asp-action="StaffMembers" asp-route-department="Library" 
+           class="btn @(ViewBag.SelectedDepartment == "Library" ? "btn-active shadow-sm" : "btn-inactive")">
+            Library
+        </a>
+    </div>
+</div>
+
+<style>
+    .text-slate-800 { color: #1e293b; }
+    .text-slate-700 { color: #334155; }
+    .text-slate-600 { color: #475569; }
+    .bg-soft-blue { background-color: #eff6ff; }
+    .bg-secondary-soft { background-color: #f8fafc; }
+    
+    .filter-pills .btn {
+        border-radius: 50px;
+        padding: 0.4rem 1.25rem;
+        font-weight: 600;
+        font-size: 0.85rem;
+        border: none;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        white-space: nowrap;
+    }
+    
+    .filter-pills .btn-inactive {
+        background-color: transparent;
+        color: #64748b;
+    }
+    
+    .filter-pills .btn-inactive:hover {
+        background-color: #f8fafc;
+        color: #2563eb;
+    }
+    
+    .filter-pills .btn-active {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        color: white !important;
+    }
+</style>
+
+<div class="card shadow-sm border-0 overflow-hidden">
+    <div class="card-header bg-white py-3 border-bottom-0">
+        <h5 class="mb-0 fw-bold text-slate-700">Team Members</h5>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="bg-light text-slate-600">
+                    <tr>
+                        <th class="ps-4 py-3 text-uppercase small fw-bold">Full Name</th>
+                        <th class="py-3 text-uppercase small fw-bold">Email Address</th>
+                        <th class="py-3 text-uppercase small fw-bold">Department</th>
+                        <th class="pe-4 py-3 text-uppercase small fw-bold text-end">Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td class="ps-4 py-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-soft-blue text-primary d-flex align-items-center justify-content-center me-3" style="width: 38px; height: 38px; font-weight: 700;">
+                                        @(user.FullName?.Substring(0, 1).ToUpper() ?? "U")
+                                    </div>
+                                    <div class="fw-bold text-slate-800">@user.FullName</div>
+                                </div>
+                            </td>
+                            <td class="text-muted">@user.Email</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(user.Department))
+                                {
+                                    <span class="badge bg-soft-blue text-primary px-3 py-2 rounded-pill border-0">
+                                        @user.Department
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted small italic">General Staff</span>
+                                }
+                            </td>
+                            <td class="pe-4 text-end">
+                                <span class="badge bg-secondary-soft text-secondary px-3 py-2 rounded-pill border-0 fw-bold" style="font-size: 0.7rem;">
+                                    STAFF
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FixMyIssue</title>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SmartGrievancePortal.styles.css" asp-append-version="true" />
+
+    <style>
+        /* Sidebar layout specific styles to match design */
+        body {
+            background-color: #f3f4f6; /* Light grey main background */
+        }
+        .wrapper {
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+            min-height: 100vh;
+        }
+        /* Sidebar Styles */
+        #sidebar {
+            min-width: 260px;
+            max-width: 260px;
+            background: #25344c; /* Dark blue matching image */
+            color: #d1d5db; /* Light gray text */
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            z-index: 1040;
+        }
+        #sidebar.active {
+            margin-left: -260px;
+        }
+        .sidebar-header {
+            padding: 20px;
+            background: #1e293b; /* Slightly darker top */
+            display: flex;
+            align-items: center;
+        }
+        .sidebar-header .logo-icon {
+            background-color: white;
+            color: #2563eb;
+            font-weight: 900;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+        .sidebar-header .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+        }
+        #sidebar ul.components {
+            padding: 10px 0;
+        }
+        #sidebar ul li a {
+            padding: 14px 25px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            color: #bbc1ce;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+        #sidebar ul li a i {
+            width: 28px;
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-right: 10px;
+        }
+        #sidebar ul li a:hover {
+            color: white;
+            background: #334155;
+            border-left: 4px solid #3b82f6;
+        }
+        #sidebar ul li.active > a {
+            color: white;
+            background: #334155;
+            border-left: 4px solid #3b82f6;
+            font-weight: 600;
+        }
+
+        /* Main Content Styles */
+        #content {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+        }
+        /* Top Navbar */
+        .top-navbar {
+            padding: 0 20px;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sidebar-collapse-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: #4b5563;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .top-navbar-user {
+            display: flex;
+            align-items: center;
+            color: #374151;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        .top-navbar-user i {
+            margin-left: 8px;
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        /* Page Content Title Bar */
+        .page-title-bar {
+            background-color: #f8fafc;
+            padding: 15px 30px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+            font-weight: 600;
+        }
+        .main-body {
+            padding: 25px 30px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="shadow-sm">
+            <div class="sidebar-header">
+                <div class="logo-icon"><i class="fa-solid fa-user"></i></div>
+                <div class="logo-text">Student</div>
+            </div>
+
+            <ul class="list-unstyled components flex-grow-1">
+                <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Dashboard" ? "active" : "")">
+                    <a asp-controller="Student" asp-action="Dashboard">
+                        <i class="fa-solid fa-house"></i> Dashboard
+                    </a>
+                </li>
+                <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Profile" ? "active" : "")">
+                    <a asp-controller="Student" asp-action="Profile">
+                        <i class="fa-regular fa-user"></i> Profile
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="Student" asp-action="Track">
+                        <i class="fa-solid fa-list-check"></i> Track Complaint
+                    </a>
+                </li>
+                <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Support" && ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" ? "active" : "")">
+                    <a asp-controller="Home" asp-action="Support">
+                        <i class="fa-solid fa-headset"></i> Support
+                    </a>
+                </li>
+                <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "DownloadCopy" ? "active" : "")">
+                    <a asp-controller="Student" asp-action="DownloadCopy">
+                        <i class="fa-solid fa-download"></i> Download Copy
+                    </a>
+                </li>
+                <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "AboutUs" ? "active" : "")">
+                    <a asp-controller="Home" asp-action="AboutUs">
+                        <i class="fa-solid fa-circle-info"></i> About Us
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!-- Top Navbar -->
+            <nav class="top-navbar shadow-sm">
+                <div>
+                    <button type="button" id="sidebarCollapse" class="sidebar-collapse-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <div class="top-navbar-user">
+                    @User.Identity?.Name <i class="fa-solid fa-chevron-down ms-2"></i>
+                    
+                    <!-- Simple logout form integration, can be improved to match modern dropdown -->
+                    <form id="logoutForm" class="d-inline ms-3" asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                        <button type="submit" class="btn btn-sm btn-outline-danger" style="text-transform: none; border-radius: 4px;">Logout</button>
+                    </form>
+                </div>
+            </nav>
+
+            <!-- Optional Title Bar matching image -->
+            @if(ViewData["Title"] != null) {
+                <div class="page-title-bar">
+                    @ViewData["Title"]
+                </div>
+            }
+
+            <div class="main-body">
+                <main role="main">
+                    @RenderBody()
+                </main>
+            </div>
+            
+            <footer class="mt-auto py-3 text-center text-muted" style="font-size: 0.85rem; border-top: 1px solid #e5e7eb;">
+                <div class="container">
+                    &copy; 2026 - FixMyIssue
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

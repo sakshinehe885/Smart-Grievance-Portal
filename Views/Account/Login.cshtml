@@ -1,0 +1,52 @@
+@model SmartGrievancePortal.ViewModels.LoginViewModel
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Welcome Back";
+}
+
+<div class="light-blue-container">
+    <div class="centered-login-card">
+        <div class="text-center mb-5">
+            <div class="login-header-icon">
+                <i class="fa-solid fa-user-lock"></i>
+            </div>
+            <h2 class="fw-bold text-dark mb-2">Welcome Back</h2>
+            <p class="text-muted small">Please enter your credentials to login.</p>
+        </div>
+
+        <form id="account" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger small mb-4 text-center"></div>
+
+            <div class="mb-4">
+                <input asp-for="Email" class="form-control light-box-input" autocomplete="username" aria-required="true" placeholder="Email Address" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-4">
+                <input asp-for="Password" type="password" class="form-control light-box-input" autocomplete="current-password" aria-required="true" placeholder="Password" />
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <div class="form-check">
+                    <input class="form-check-input" asp-for="RememberMe" id="RememberMe" />
+                    <label class="form-check-label text-muted small" for="RememberMe">
+                        @Html.DisplayNameFor(m => m.RememberMe)
+                    </label>
+                </div>
+            </div>
+
+            <button id="login-submit" type="submit" class="btn btn-grouped-primary w-100 mb-4">Log In</button>
+
+            <div class="text-center">
+                <p class="small text-muted mb-2">Don't have an account?</p>
+                <a asp-action="Register" class="text-decoration-none fw-bold text-primary small">Create an account</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,145 @@
+@model SmartGrievancePortal.ViewModels.StudentRegisterViewModel
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Student Registration";
+}
+
+<div class="light-blue-container">
+    <div class="centered-register-card">
+        <div class="text-center mb-5">
+            <div class="login-header-icon">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <h2 class="fw-bold text-dark mb-2">Registration</h2>
+            <p class="text-muted small">Fill in your details to create an account.</p>
+        </div>
+
+        <form id="registerForm" asp-action="Register" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger small mb-4 text-center"></div>
+
+            <!-- Box 1: Personal Details -->
+            <div class="details-group-box">
+                <h5>Personal Details</h5>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <input asp-for="FullName" class="form-control light-box-input" placeholder="Full Name" />
+                        <span asp-validation-for="FullName" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <input asp-for="Email" class="form-control light-box-input" placeholder="Email Address" />
+                        <span asp-validation-for="Email" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <label class="text-muted small mb-2 ms-1">Passport Photo</label>
+                        <input type="file" asp-for="PassportPhoto" class="form-control light-box-input" accept="image/*" />
+                        <span asp-validation-for="PassportPhoto" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <input asp-for="Password" type="password" class="form-control light-box-input" placeholder="Password" />
+                        <span asp-validation-for="Password" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <input asp-for="ConfirmPassword" type="password" class="form-control light-box-input" placeholder="Confirm Password" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <div class="ms-1">
+                            <label class="text-muted small mb-3 d-block">Gender</label>
+                            <div class="d-flex gap-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" asp-for="Gender" value="Male" id="genderMale">
+                                    <label class="form-check-label text-muted small" for="genderMale">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" asp-for="Gender" value="Female" id="genderFemale">
+                                    <label class="form-check-label text-muted small" for="genderFemale">Female</label>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Gender" class="text-danger small"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 2: Academic Details -->
+            <div class="details-group-box">
+                <h5>Academic Details</h5>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <input asp-for="Course" class="form-control light-box-input" placeholder="Course (e.g. B.Tech)" />
+                        <span asp-validation-for="Course" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <input asp-for="Year" class="form-control light-box-input" placeholder="Year (e.g. 3rd Year)" />
+                        <span asp-validation-for="Year" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <input asp-for="Division" class="form-control light-box-input" placeholder="Division" />
+                        <span asp-validation-for="Division" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <input asp-for="RollNumber" class="form-control light-box-input" placeholder="Roll Number" />
+                        <span asp-validation-for="RollNumber" class="text-danger small"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 3: Contact Details -->
+            <div class="details-group-box">
+                <h5>Contact Details</h5>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <input asp-for="ContactNumber" class="form-control light-box-input" placeholder="Primary Contact Number" />
+                        <span asp-validation-for="ContactNumber" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <input asp-for="AlternateContactNumber" class="form-control light-box-input" placeholder="Alternate Contact Number" />
+                        <span asp-validation-for="AlternateContactNumber" class="text-danger small"></span>
+                    </div>
+                    <div class="col-12">
+                        <div class="ms-1">
+                            <label class="text-muted small mb-3 d-block">Hosteller Status</label>
+                            <div class="d-flex gap-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" asp-for="IsHosteller" value="True" id="hostellerYes">
+                                    <label class="form-check-label text-muted small" for="hostellerYes">Yes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" asp-for="IsHosteller" value="False" id="hostellerNo">
+                                    <label class="form-check-label text-muted small" for="hostellerNo">No</label>
+                                </div>
+                            </div>
+                            <span asp-validation-for="IsHosteller" class="text-danger small"></span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <textarea asp-for="Address" class="form-control light-box-input" rows="2" placeholder="Residential Address"></textarea>
+                        <span asp-validation-for="Address" class="text-danger small"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirmation -->
+            <div class="form-check mb-5 mt-4 text-center">
+                <input class="form-check-input d-inline-block float-none me-2" type="checkbox" asp-for="IsInformationCorrect" id="infoCorrect" />
+                <label class="form-check-label text-muted small mt-1" for="infoCorrect">
+                    I hereby declare all information is correct.
+                </label>
+                <span asp-validation-for="IsInformationCorrect" class="text-danger small d-block"></span>
+            </div>
+
+            <div class="text-center mb-4">
+                <button type="submit" class="btn btn-grouped-primary w-100 py-3">Register Now</button>
+            </div>
+
+            <div class="text-center">
+                <p class="small text-muted mb-0">Already have an account? <a asp-action="Login" class="text-decoration-none fw-bold text-primary">Login Here</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
