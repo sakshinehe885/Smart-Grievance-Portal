@@ -1,3 +1,7 @@
+How to execute:
+Download and setup Microsoft Visual Studio -> Click on open project/solutions -> select the SmartGrievancePortal.sln file
+
+Login Credentials:
 Admin Login
 Username: admin
 Password: admin123
